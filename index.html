@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>daSumptous</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styleS/style.css">
+  <link rel="stylesheet" type="text/css" href="styleS/all.css">
+
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <a href="#default" class="logo">DaSumptuous Food</a>
+    <div class="navi">
+      <a class="active" href="#home">Home</a>
+      <a id="copBtn">Coporate Signup</a>
+      <div id="copModal" class="modal">
+        <span class="close">&times;</span>
+        <form name="form1" class="modal-content" action="">
+          <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill this form to create an account.</p>
+            <hr>
+            <input type="text" placeholder="First Name" name="firstName" required>
+            <input type="text" placeholder="Last Name" name="lastName" required>
+            <input type="text" placeholder="Company Name" name="companyName" required>
+            <input type="email" placeholder="Enter Email" name="email" required>
+            <input type="text" placeholder="Phone Number" name="phoneNumber">
+            <input type="text" placeholder="Street Name" name="streetName" required>
+            <input type="text" placeholder="Post Code" name="companyName" required>
+            <input type="text" placeholder="City" name="city" required>
+            <input type="number" placeholder="No of Employees" name="numOfEmployees">
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+            <div class="clearfix">
+              <button type="button" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <a id="resBtn"> Restaurant Signup</a>
+      <div id="resModal" class="modal1">
+        <span class="close">&times;</span>
+        <form name="form2" class="modal-content" action="#">
+          <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to register your restaurant.</p>
+            <hr>
+            <input type="text" placeholder="Restaurant Name" name="resName" required>
+            <input type="text" placeholder="Restaurant Phone" name="resPhone" required>
+            <input type="text" placeholder="Contact Name" name="contactName" required>
+            <input type="text" placeholder=" Contant Phone" name="contactPhone">
+            <input type="email" placeholder="Contant Email" name="contactEmail" required>
+            <input type="text" placeholder="Street Address" name="streetAddress" required><input type="text"
+              placeholder="City" name="resCity" required>
+            <input type="text" placeholder="Post Code" name="resPostCode" required>
+            <select name="region" required multiple>
+              <option>Region</option>
+              <option>Agege</option>
+              <option>Ageromi-Ifelodun</option>
+              <option>Alimosho</option>
+              <option>Amuwo-Odofin</option>
+              <option>Apapa</option>
+              <option>Bagadry</option>
+              <option>Epe</option>
+              <option>Eti-Osa</option>
+              <option>Ibegu-Lekki</option>
+              <option>Ifako-Ijaye</option>
+              <option>Ikeja</option>
+              <option>Ikorodu</option>
+              <option>Island</option>
+              <option>Kosofe</option>
+              <option>Lagos Mainland</option>
+              <option>Mushin</option>
+              <option>Ojo</option>
+              <option>Oshodi-Isolo</option>
+              <option>Shomolu</option>
+              <option>Surulere</option>
+            </select>
+            <select>
+              <option>Services</option>
+              <option>Pickup Only</option>
+              <option>Delivery Only</option>
+              <option>Dine In Only</option>
+              <option>Pickup & Delivery</option>
+              <option>Pickup & Dine in</option>
+              <option>Delivery & Dine in</option>
+              <option>Pickup, Delivery & Dine in</option>
+            </select>
+            <select>
+              <option>Commission type</option>
+              <option>Commission</option>
+              <option>Commission+ invoice</option>
+            </select>
+            <input type="text" placeholder="Username" name="username" required>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <!-- <p style="margin-left: 0px;">I agree to the<a href="#" style="color:dodgerblue">Terms & Conditions</a>.</p>
+ -->
+            <div class="clearfix">
+              <button type="button" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- <div class="dropdown">
+        <button class="dropbtn">Contact
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#">+2348165203147</a>
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div> -->
+      <a id="signBtn">Signup</a>
+      <div id="signModal" class="modal2">
+        <span class="close">&times;</span>
+        <form name="form3" class="modal-content" action="#" onsubmit="return validate()">
+          <div class="container">
+            <h1>Sign Up</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <input type="text" placeholder="First Name" name="firstName">
+            <input type="text" placeholder="Last Name" name="lastName">
+            <select name="gender">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+            <input type="email" placeholder="Email Address" name="email" >
+            <input type="text" placeholder="Mobile Number" name="phoneNumber">
+            <input type="password" placeholder="Enter Password" name="psw" >
+            <input type="password" placeholder="Repeat Password" name="psw-repeat">
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbtn">Cancel</button>
+              <input type="submit" class="signupbtn" value="Submit" onclick="userSignUp()"/>
+            </div>
+          </div>
+        </form>
+      </div>
+      <a id="logBtn">Login</a>
+      <div id="logModal" class="modal3">
+        <span class="close">&times;</span>
+        <form name="form4" class="modal-content" action="#">
+          <div class="container">
+            <h1>Login</h1>
+            <p>.</p>
+            <hr>
+            <input type="email" placeholder="Enter Email" name="email" required>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <button type="submit" class="signupbtn">Login</button>
+          </div>
+      </div>
+      </form>
+      <a href="#" style="color: white;"><i class="fas fa-shopping-cart"></i></a>
+    </div>
+
+    <!--  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a></div> -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="clear"></div>
+  <!-- slideshow -->
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+
+      <img src="Images/SL1.jpg" style="width: 100%; height: 80vh;">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="Images/SL2.jpg" style="width: 100%; height: 80vh; ">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="Images/SL3.jpg" style="width: 100%;height: 80vh; ">
+    </div>
+    <div class="mySlides fade">
+      <img src="Images/SL4.jpg" style="width: 100%;height: 80vh; ">
+
+    </div>
+    <div class="mySlides fade">
+      <img src="Images/SL5.jpg" style="width: 100%;height: 80vh;">
+    </div>
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+  <!-- end of slideshow -->
+  <!-- search for restaurants -->
+  <div class="clear"></div>
+  <div class="resSearch">
+    <center>
+      <h4 style="font-weight: bolder;">Make your Order Now</h4>
+    </center>
+    <form class="form-inline" action="/action_page.php">
+      <select class="searchSelect" name="city">
+        <option>Select your location...</option>
+        <option>Agege</option>
+        <option>Ageromi-Ifelodun</option>
+        <option>Alimosho</option>
+        <option>Amuwo-Odofin</option>
+        <option>Apapa</option>
+        <option>Bagadry</option>
+        <option>Epe</option>
+        <option>Eti-Osa</option>
+        <option>Ibegu-Lekki</option>
+        <option>Ifako-Ijaye</option>
+        <option>Ikeja</option>
+        <option>Ikorodu</option>
+        <option>Island</option>
+        <option>Kosofe</option>
+        <option>Lagos Mainland</option>
+        <option>Mushin</option>
+        <option>Ojo</option>
+        <option>Oshodi-Isolo</option>
+        <option>Shomolu</option>
+        <option>Surulere</option>
+      </select>
+      <input class="searchSelect" type="text" id="local" placeholder="Enter Location" name="local">
+      <button class="searchBtn" type="submit">Search</button>
+    </form>
+  </div>
+  <!-- end of search for restaurants -->
+  <div class="clear"></div>
+  <div>
+    <h4 id="pop">Most Popular Restaurants</h4>
+    <div class="cRow">
+      <div class="card">
+        <div class="imageDiv">
+          <img src="Images/20170218_120757.jpg" alt="Image" style="width:100%">
+        </div>
+
+        <div class="containers">
+          <h4><b>Domino's</b></h4>
+          <p style="color: white;">75 Ikotun-Idimu Rd, Ikotun, Lagos</p>
+          <a href="#" class="pLink">Visit</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imageDiv">
+          <img src="Images/2017-10-23.jpg" alt="Image" style="width:100%">
+        </div>
+
+        <div class="containers">
+          <h4><b>ColdStone Creamery</b></h4>
+          <p>231 Ikotun-Idimu Rd, Egbeda,Lagos.</p>
+          <a href="#" class="pLink">Visit</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imageDiv">
+          <img src="Images/IMG-20171123-WA0003.jpg" alt="Image" style="width:100%">
+        </div>
+
+        <div class="containers">
+          <h4><b>Jevinik</b></h4>
+          <p>14b Agoro St,Victoria island, Lagos</p>
+          <a href="#" class="pLink">Visit</a>
+        </div>
+      </div>
+    </div>
+    <div class="cRow">
+      <div class="card">
+        <div class="imageDiv">
+          <img src="Images/IMG_20180417_171449.jpg" alt="Image" style="width:100%">
+        </div>
+
+
+        <div class="containers">
+          <h4><b>Gurunar's Vicerory</b></h4>
+          <p>Akin Adesola St, Victoria Island, Lagos</p>
+          <a href="#" class="pLink">Visit</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imageDiv">
+          <img src="Images/2017-12-07 (1).jpg" alt="Image" style="width:100%">
+        </div>
+
+        <div class="containers">
+          <h4><b>Mega Chicken</b></h4>
+          <p>3, Fagba Crescent, Ogba, Ikeja</p>
+          <a href="#" class="pLink">Visit</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="imageDiv">
+          <img src="Images/FB_IMG_1514379855859.jpg" alt="Image" style="width:100%">
+      <h4><b>Bay Lounge</b></h4>
+      <p>14b Agoro St,Victoria island, Lagos</p>
+      <a href="#" class="pLink">Visit</a>
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <h4 id="cj">How it works</h4>
+  <p id="gt">Get your favourite food in 4 simple ways.
+    <div class="gRow">
+      <div class="gColumn" style="background-color:#380f5b;">
+        <img class="pic" src="Images/step1.png">
+        <h4 class="h">Search</h4>
+        <p>Find all restaurants available near you</p>
+      </div>
+      <div class="gColumn" style="background-color:#dc56ca;">
+        <img src="Images/step2.png" style="vertical-align: middle;">
+        <h4 class="h">Choose</h4>
+        <p>Browse hundreds of menus to find the food you like</p>
+      </div>
+      <!-- #602b8f -->
+      <div class="gColumn" style="background-color:#574369ce;">
+        <img src="Images/step3.png" style="vertical-align: middle;">
+        <h4 class="h">Pay</h4>
+        <p>It's quick, secure and easy</p>
+      </div>
+      <div class="gColumn" style="background-color:#161429;">
+        <img src="Images/step4.png" class="pic">
+        <h4 class="h">Enjoy</h4>
+        <p>Food is prepared and delivered to your door</p>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <div class="news">
+      <form>
+        <div id="subscribeHeading">
+          <center>
+            <h1>Subscribe to our newsletter</h1>
+          </center>
+          <center>
+            <p>Don't miss out on our great offers & Recieve news from Popular Restaurants close to you via Email</p>
+          </center>
+        </div>
+        <center>
+          <div class="rowd">
+
+            <div class="col-75">
+              <select name="city" class="selection">
+                <option>Select your location...</option>
+                <option>Agege</option>
+                <option>Ageromi-Ifelodun</option>
+                <option>Alimosho</option>
+                <option>Amuwo-Odofin</option>
+                <option>Apapa</option>
+                <option>Bagadry</option>
+                <option>Epe</option>
+                <option>Eti-Osa</option>
+                <option>Ibegu-Lekki</option>
+                <option>Ifako-Ijaye</option>
+                <option>Ikeja</option>
+                <option>Ikorodu</option>
+                <option>Island</option>
+                <option>Kosofe</option>
+                <option>Lagos Mainland</option>
+                <option>Mushin</option>
+                <option>Ojo</option>
+                <option>Oshodi-Isolo</option>
+                <option>Shomolu</option>
+                <option>Surulere</option>
+              </select>
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div class="col-25">
+              <input type="text" placeholder="Email" name="emailAddress" onfocus="this.value=''" required>
+            </div>
+          </div>
+          <div class="rowd">
+            <input type="submit" value="Subscribe">
+          </div>
+
+      </form>
+    </div>
+    <div class="clear"></div>
+    <footer class="foot">
+      <div class="footRow">
+        <div class="footColumn">
+          <div class="footCard">
+            <h4 class="card_textsHead">City</h4>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Agege</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Ageromi-Ifelodun</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Alimosho</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts"> Amuwo Odofin</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Apapa</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Badagry</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Epe</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Eti-Osa</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Ibeju-Lekki</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Ifako-Ijaye</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Ikeja</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Ikorodu</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Island</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Kosofe</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Lagos-Mainland</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Mushin</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Ojo</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Oshodi-Isolo</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Shomolu</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Surulere</h6>
+            </a>
+          </div>
+        </div>
+        <div class="footColumn">
+          <div class="footCard">
+            <h4 class="card_textsHead">Cusines</h4>
+            <a href="" class="card_links">
+              <h6 class="card_texts">Pizzas In Lagos</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">Burgers in Lagos</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">Seafood in Lagos</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">Cakes in Lagos</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">Salads In Lagos</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">Indian Food In Lagos</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">Pasta In Lagos</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">Nigerian Food In Lagos</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">Chinese Food In Lagos</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">Sandwiches In Lagos</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">Breakfast Menu In Lagos</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">African Food In Lagos</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">American Food In Lagos</h6>
+            </a>
+          </div>
+        </div>
+        <div class="footColumn">
+          <div class="footCard">
+            <h4 class="card_textsHead">Popular Restaurants</h4></a>
+            <a href="https://www.dominospizza.com.ng" class="card_links">
+              <h6 class="card_texts">Craft Gourmet By Lou Baker</h6>
+            </a>
+            <a href="https://www.jevinik.com.ng" class="card_links">
+              <h6 class="card_texts">Jevinik</h6>
+            </a>
+            <a href="https://www.dominospizza.com.ng" class="card_links">
+              <h6 class="card_texts">Domino's</h6>
+            </a>
+            <a href="https://www.bayloungeltd.com" class="card_links">
+              <h6 class="card_texts">Bay Lounge</h6>
+            </a>
+            <a href="https://www.megachickenrestaurantsltd.com" class="card_links">
+              <h6 class="card_texts">Mega Chicken</h6>
+            </a>
+            <a href="https://www.coldstonecreamery.com" class="card_links">
+              <h6 class="card_texts">Cold Stone Creamery</h6>
+            </a>
+            <a href="" class="card_links">
+              <h6 class="card_texts">Gurunary's Viceroy</h6>
+            </a>
+            <a href="https://www.yellowchilly.ca" class="card_links">
+              <h6 class="card_texts">Yellow Chilli</h6>
+            </a>
+            <a href="https://www.oceanbasket.com" class="card_links">
+              <h6 class="card_texts">Ocean Basket</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">La Pizza</h6>
+            </a>
+            <a href="https://www.shawarma-n-co.com" class="card_links">
+              <h6 class="card_texts">Sharwarma & Co</h6>
+            </a>
+            <a href="https://www.terrakulture.com" class="card_links">
+              <h6 class="card_texts">Terra Kulture</h6>
+            </a>
+          </div>
+        </div>
+        <div class="footColumn">
+          <div class="footCard">
+            <h4 class="card_textsHead">Da Sumptuous Food</h4>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">About Us</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Terms and Conditions</h6>
+            </a>
+            <a href="#" class="card_links">
+              <h6 class="card_texts">Privacy Policy</h6>
+            </a>
+            <br>
+            <a href="#" class="card_links">
+              <h4 class="card_textsHead">Contact Us</h4>
+            </a>
+            <div>
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+            <br>
+            <br>
+            <h4 class="card_textsHead">We Accept</h4>
+            <div class="payment_cards">
+              <img src="Images/masterCard.png">
+              <img src="Images/visa.png">
+            </div>
+          </div>
+        </div>
+        <!-- <div class="clear"></div>
+      <hr>
+ <h6 style="float: right;"> &copy; Copyright 2019 Da Sumptutuos Food </h6>
+  </div> -->
+
+
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+    <script type="text/javascript" src="Js/Script.js"></script>
+</body>
+
+</html>

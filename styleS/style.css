@@ -1,0 +1,782 @@
+body{
+	
+  /*background: linear-gradient(to right, #82B1FF,#E1F5FE);*/
+  /* background-color: #ffccff; */
+  background: linear-gradient(to left, #380f5b 52%, #a856dc 100%);
+
+	/*background-color: white;*/
+  /*convert texts to em and sections to percentage*/
+}
+/*begining of topnav*/
+.topnav {
+  overflow: hidden;
+  /* background-color: #cc00ff; */
+  background-color: #380f5b;
+}
+.navi{
+  float: right;
+  text-align: center;
+}
+.topnav a {
+  float: left;
+  display: block;
+  /*color: white;*/
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+.topnav a:hover{
+  background-color: #cc99ff;
+}
+.logo{
+  color: rgb(187, 103, 103);
+  font-weight: bolder;
+}
+
+.active {
+  background-color:#cc66ff;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  /*background-color: #555;*/
+  color: white;
+  transform: scale(1.1);
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  .topnav .dropbtn:hover .dropdown-content {
+    display: block !important;
+
+  }
+
+.dropdown:hover .dropdown-content {
+    display: block !important; 
+}
+
+@media only screen and (max-width: 600px) {
+  .topnav a:not(:first-child),.dropdown.dropbtn {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {
+    position: relative !important;
+
+  }
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.clear{clear: both;}
+/*end of header*/
+
+/*.headerStyle{
+	border-radius: 10Px;
+	background-color: black;
+	position: relative; 
+
+}
+.naviBar{
+	background-color: white;
+	text-align: right;
+}*/
+        /*Modal box*/
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email], input[type=number], select {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus,input[type=number]:focus, select:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for all buttons */
+/*button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}*/
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    border-radius: 15%;
+    background-color: #cc66ff;
+}
+.signupbtn{
+   padding: 14px 20px;
+   border-radius: 15%;
+    background-color: #cc66ff;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 20%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+#copBtn, #resBtn, #signBtn, #logBtn{
+  cursor: pointer;
+  color: white;
+}
+
+/* The Modal (background) */
+.modal, .modal1, .modal2, .modal3 {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /* left: 0; */
+    /* top: 0; */
+    right: 30%;
+    width: 50%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #380f5b;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media only screen and (max-width: 300px) {
+  .modal, .modal1, .modal2, .modal3 {
+    width: 100%;
+  }
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
+/*slideshow*/
+/** {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}*/
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1600px;
+  position: relative;
+  margin: auto;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activeDot, .dot:hover {
+  /* background-color: #717171; */
+  background-color: #cc66ff;
+}
+
+/* Fading animation */
+.fade {
+  /* -webkit-animation-name: fade;
+  -webkit-animation-duration: 8s;
+  animation-name: fade;
+  animation-duration: 5.5s; */
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/*end of slideshow*/
+/*search for restaurants*/
+/*.resSearch .form-inline {
+    margin: 50px 50px 50px 50px; 
+    margin-left: 150px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}*/
+
+/* Add some margins for each label */
+/*.form-inline label {
+  margin: 5px 10px 5px 0;
+}*/
+
+/* Style the input fields */
+/* .resSearch .form-inline input,select {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}*/
+
+/* Style the submit button */
+/*.resSearch .form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+}*/
+
+/*.resSearch .form-inline button:hover {
+  background-color: royalblue;
+}*/
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+/*@media (max-width: 800px) {
+  .resSearch .form-inline input {
+    margin: 10px 0;
+  }
+
+  .resSearch .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}*/
+.resSearch{
+  margin: 10px, 30px, 10px, 30px;
+}
+.resSearch .form-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /*margin-left: 100px;*/
+  justify-content: center;
+}
+.resSearch .form-inline .searchSelect {
+    display: inline-block;
+    width: 300px;
+    vertical-align: middle;
+
+  }
+  .searchBtn{
+     display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  /*success*/
+  background-color: #cc66ff;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 10px;
+  }
+/* end of search for restaurants*/
+.cRow:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cRow{
+height: 30%;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    float: left;
+    margin: 10px;
+    height: 20%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card:hover .imageDiv img{
+   transform: scale(1.2);
+}
+
+.imageDiv{
+  position: relative;
+  overflow: hidden;
+}
+
+
+.imageDiv img{
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.1);
+}
+
+.container {
+    padding: 1px 8px;
+}
+
+h4{
+  font-family:Arial !important;
+  /* font-size: 77px; */
+  color: white !important;
+}
+p{
+  color: white !important;
+  font-family: 'Segoe UI';
+  /* font-size: 50px; */
+  
+}
+
+.pLink{
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 10px;
+  font-family: 'Segoe UI';
+  background-color: #cc66ff;
+  color: white;
+}
+.pLink:hover{
+  transform: scale(1.1);
+  background-color: #cc99ff
+}
+@media only screen and (max-width: 700px){
+  .card{
+    height: 60%;
+    width: 100%;
+    margin: auto;
+    position: relative;
+  }
+  .gColumn{
+    width: 100% !important;
+    display: block !important;
+    justify-content: center !important;
+    margin: auto;
+  }
+  .gColumn img{
+   left: 120px !important;
+position: relative !important;
+}
+}
+@media only screen and (max-width: 850px){
+  .card{
+    height: 60%;
+    width: 100%;
+    margin: auto;
+    position: relative;
+  }
+  .gColumn{
+    width: 100% !important;
+    display: block !important;
+    justify-content: center !important;
+    margin: auto;
+  }
+  .gColumn img{
+   left: 250px !important;
+   position: relative !important;
+}
+}
+
+@media only screen and (max-width: 600px){
+  .card{
+     height: 60%;
+    width: 100%;
+    display: block;
+    /*margin-bottom: 50px;*/
+    padding: 20px;
+    margin: auto;
+    height: 60%;
+    position: relative;
+  }
+}
+
+
+#pop{
+  /*font-weight: bolder;*/
+	padding-top: 5px;
+	padding-bottom: 5px;
+  color: #212121;
+  font-size: 30px;
+    text-align: center;
+    font-weight: 300;
+    font-family: Lato, sans-serif;
+}
+#cj{
+	color: #212121;
+	font-size: 56px;
+    text-align: center;
+    font-weight: 300;
+    font-family: Lato, sans-serif;
+}
+#gt{
+	text-align: center;
+    color:#212121;
+    font-family: 'Segoe UI';
+  font-size: 18px;
+}
+.h{
+  background-color:#cc66ff;
+  /* background-color: #161429; */
+	border-radius: 10px;
+	color:rgb(255, 255, 255);
+	font-size: 30px; 
+	padding: 8px;	
+  text-align: center;
+}
+/*new grid*/
+.gColumn {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 320px; /* Should be removed. Only for demonstration */
+}
+.gColumn img{
+   left: 70px;
+position: relative;
+}
+.gColumn p{
+   font-family: 'Segoe UI';
+  font-size: 18px;
+
+}
+
+/* Clear floats after the columns */
+.gRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+@media only screen and (max-width: 600px) {
+    .gColumn {
+        width: 100%;
+    }
+}
+/*subscribe*/
+#subscribeHeading p{
+  font-family: 'Segoe UI';
+  font-size: 18px;
+}
+.rowd{
+  border-radius: 5px;
+   display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /*margin: auto;*/
+  /*align-items: center;*/
+  justify-content: center;
+  margin: auto !important;
+}
+input[type=text], select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type=submit] {
+    background-color: #cc66ff;
+    color: white;
+    padding: 12px 50px;
+    margin: auto;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 50%;
+    /*float: right;*/
+}
+
+input[type=submit]:hover {
+    background-color: #cc99ff;
+}
+
+/*.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}*/
+
+
+.col-25 {
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+}
+.selection{
+
+}
+.selection option{
+  color: black;
+  /* font-weight: bolder; */
+  padding-left: 1000px;
+  font-size: 50px;
+}
+
+/* Clear floats after the columns */
+.rowd:after {
+    content: "";
+    /*display: table;*/
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media only screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+/*end of subscribe*/
+.foot{
+      /* background-color: rgba(0,0,0,0.2); */
+      /* background-color: #212121; */
+      /* background-color: #cc00ff; */
+       background-color: #380f5b;;
+    
+  }
+  
+  /*border-style: dotted;*/
+  /*border-radius: 10Px;*/
+  /*background-color: black;*/
+
+.clear{
+  clear: both;
+}
+.footColumn{
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+/*remove extra left and right margin due to padding*/
+/*.footRow{margin: 0 -5px;}*/
+.footRow:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+/*responsiveness*/
+@media only screen and (max-width: 600px){
+  .footColumn{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+.footCard{
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    text-align: center !important;
+    padding: 1.000em;
+    /*background-color: black;*/
+  
+}
+/*card_texts*/
+.card_textsHead{
+  color: white;
+  margin-bottom: 0.625em;
+}
+.card_links{
+  color: #CFD8DC;
+  text-decoration: none;
+}
+.footColumn .footCard .card_links:hover{
+   transform: scale(1);
+}
+.card_links:hover{
+  font-weight: bolder;
+  color: #cc99ff;
+  text-decoration: none;
+  transform: scale(1);
+    /*background-color: dodgerblue;*/
+}
+.card_texts{
+  margin-bottom: 2px;
+  color: #ccc;
+ /* transition: scale(1.1);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;*/
+  transition: all 0.4s ease-in-out;
+  font-family: 'Segoe UI';
+  font-size: 15px;
+}
+.card_texts:hover{
+   transform: scale(1.4);
+   color:#cc99ff;
+   /*font-weight: bolder;*/
+}
+
+/*social icons*/
+.social-icons {
+	display: inline-flex;
+
+}
+.social-icons li{
+	list-style: none;
+}
+
+.social-icons li i{
+  font-size: 2em;
+  font-weight: 800;
+  color: #f2f2f2;
+  margin: 5px;
+  border-radius: 10px;
+  width: 40px;
+  transition: 0.4s;
+}
+/* affinity
+scoSearch engine optimization */
+
+.social-icons li i:hover{
+  color: #cc99ff;
+  transform: scale(1.4);
+}
+
+#payment_cards{
+	float: right;
+	left: 12px;
+}
